@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
-connectDB(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/billingdb');
+connectDB(process.env.MONGO_URL);
 
 app.use('/api/products', require('./routes/products'));
 app.use('/api/customers', require('./routes/customers'));

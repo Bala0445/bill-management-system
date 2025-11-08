@@ -128,7 +128,7 @@ export default function CreateInvoice() {
     e.preventDefault();
     try {
       const items = lines.map((l) => ({ product: l.productId, qty: +l.qty }));
-      await api.post('/invoices', {
+      await api.post('http://localhost:5000/api/invoices', {
         customer: selectedCustomer,
         items,
         taxPercent: +tax,
