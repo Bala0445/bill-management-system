@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://billing-management-system-1.onrender.com/api',
+  baseURL: process.env.REACT_APP_API_URL,
   timeout: 10000,
 });
 
